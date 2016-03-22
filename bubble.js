@@ -10,7 +10,7 @@ Bubble.prototype = {
   update: function() {
     this.x += random(-1, 1);
     this.y += random(0, -2);
-    if (this.y - this.radius <= 0) this.y = this.radius + random(0, 2);
+    if (this.y - this.radius <= 0) this.y = height-this.radius;
   },
 
   display: function () {
