@@ -2,10 +2,15 @@ var bubbles = [];
 
 setup = function () {
   createCanvas(600, 600);
-  // your code goes here
 };
 
 draw = function () {
   background(0);
-  // your code goes here
+
+  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
+
+  bubbles.forEach(function updateAndDisplay (bubble) {
+  bubble.display();
+  bubble.update();
+});
 };
